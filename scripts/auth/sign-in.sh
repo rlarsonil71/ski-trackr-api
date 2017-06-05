@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# $ EMAIL=ron@ski.com PASSWORD=triplets scripts/auth/sign-in.sh
+
 API="http://localhost:4741"
 URL_PATH="/sign-in"
 
