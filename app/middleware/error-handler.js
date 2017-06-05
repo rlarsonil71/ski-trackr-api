@@ -1,6 +1,6 @@
 'use strict';
 
-const debug = require('debug')('express-api-template:error-handler');
+const debug = require('debug')('ski-trackr-api:error-handler');
 
 const errorHandler = (err, req, res, next) => {
   //jshint unused:false
