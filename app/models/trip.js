@@ -30,6 +30,7 @@ const tripSchema = new mongoose.Schema({
   },
   comments: {
     type: String,
+    required: true
   },
   _owner: {
     type: mongoose.Schema.Types.ObjectId,
