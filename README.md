@@ -9,6 +9,29 @@ This project uses `express` as an API and includes user authentication and commo
 This API follows Rails-like conventions for organizing controller and
 model code, and has a routing layer which is similar to the Rails routing DSL.
 
+## Heroku API URL
+
+-   [`Heroku API URL`](https://protected-gorge-95856.herokuapp.com/)
+
+## GitHub Application Repositories
+
+-   [`Front-End Client`](https://github.com/rlarsonil71/ski-trackr-client)
+-   [`Back-End API`](https://github.com/rlarsonil71/ski-trackr-api/)
+
+## Front-End Client Application URL
+
+-   [`Client URL`](https://rlarsonil71.github.io/ski-trackr-client)
+
+## Project Requirements
+
+-   [`capstone-project`](https://github.com/ga-wdi-boston/capstone-project)
+
+## Project Dependencies
+
+-   [`ski-trackr-api`](https://github.com/ga-wdi-boston/ski-trackr-api)
+-   [`express-api-template`](https://github.com/ga-wdi-boston/express-api-template)
+-   [`express-api-deployment-guide`](https://github.com/ga-wdi-boston/express-api-deployment-guide)
+
 ## Dependencies
 
 Install with `npm install`.
