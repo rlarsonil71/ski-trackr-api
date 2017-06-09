@@ -9,6 +9,11 @@ This project uses `express` as an API and includes user authentication and commo
 This API follows Rails-like conventions for organizing controller and
 model code, and has a routing layer which is similar to the Rails routing DSL.
 
+This is my final Capstone project for the WDI (Web Development Immersive) LM01 cohort at General Assembly Boston.
+
+-   Project Start Date: June 5th 2017
+-   Project End Date: June 9th 2017
+
 ## Project Links
 
 #### Front-End Ski-Trackr Client Application URL
@@ -31,10 +36,31 @@ model code, and has a routing layer which is similar to the Rails routing DSL.
 -   [`express-api-deployment-guide`](https://github.com/ga-wdi-boston/express-api-deployment-guide)
 -   [`heroku`](https://dashboard.heroku.com/apps)
 
+## List of Technologies Used
+
+1.  HTML, CSS, JavaScript
+2.  jQuery, SASS
+3.  Bootstrap navbar, modals and drop-down menus
+4.  Handlebars templates
+5.  Express Model/Controller
+6.  AJAX
+7.  Heroku with mLab
+8.  Mongoose
+9.  MongoDB
+
+## List of Servers Used
+
+#### Front-End
+-  [`GRUNT server`](http://localhost:7165/)
+
+#### Back-end EXPRESS API Server
+-  [`ski-trackr-api`](http://localhost:4741/trips)
+
 ## Dependencies
 
 Install with `npm install`.
 
+-   [`Webpack`](https://webpack.github.io)
 -   [`express`](http://expressjs.com/)
 -   [`mongoose`](http://mongoosejs.com/)
 
@@ -44,6 +70,51 @@ Install with:
  - `git push heroku master`
  - `heroku restart`
  - `heroku open`
+
+## Planning and Software Design - Development Process
+
+As with all the previous projects, I first read over the project requirements to
+understand what was needed to achieve MVP (minimal viable product).  Once that
+was understand, I thought of a project idea.  I created the wireframes, user
+stories, and ERD.  Once that was complete, I decided to use MongoDB since it is
+more flexible than Postgres to use if I needed to change my resource model.
+From the ERD, I proceeded to design and build the basic backend tables I needed.
+
+I concentrated first on the backend model API working on building and testing CRUD
+CURL scripts for user and trips resource.  Once all CRUD scripts worked successfully
+for user authentication (sign-up, sign-in, change-password, and sign-out) and for
+the trips resource, I used a front-end template that was used in our team project
+to build out the front-end client.  I started building front-end client functionality
+starting with the user authentication functions followed by logging and viewing
+ski and snowboard trip entries.
+
+I tried to build more on Bootstrap such as using a Navbar, modals and dropdown
+menus.  I added a date picker to the `log my trip` and `update my trip` modal
+forms.  I added user edits throughout the application showing alerts to the user
+which are rendered below the navbar.
+
+I experimented with Angular user authentication, components and interfaces but
+due to project time constraints, proceeded to use the browser-template without
+a front-end framework in order to achieve project MVP.
+
+## Planning - Problem Solving Strategy
+
+1.  Using Google Chrome Development Tools (Inspect).
+2.  Add console.log messages to code.
+3.  Add debugger and step through code examining variables and logic.
+4.  Review WDI class notes and previous trainings, labs, and/or studies.
+5.  Google issue (i.e. handlebars, helpers, error msg)
+6.  Open issue in GitHub capstone-project repository.
+
+## Coding Standards
+
+1.  Used git source code control and GitHub repositories.
+2.  Commented code to describe use of functions and variables as well as authorization and client/API logic.
+3.  Used semantic naming for functions, variables and parameters.
+4.  Used semantic naming for HTML tags, classes and IDs.
+5.  Followed all linter suggestions including proper spacing and indentations.
+6.  Frequent and small commits to git hub repository.
+7.  Followed separation of concerns as often as possible.
 
 ## Structure
 
@@ -283,6 +354,18 @@ Content-Type: application/json; charset=utf-8
 | GET    | `/usertrips/:id`       | `trips#indexUser` |
 | PATCH  | `/trips/:id`           | `trips#update`    |
 | DELETE | `/trips/:id`           | `trips#delete`    |
+
+## Unsolved Problems or Major Hurdles
+
+There are no known problems to date.  The only major hurdles were trying to remember
+MongoDB, controlling user flow showing no user-facing errors as well as dealing
+systematically with click event handlers for each of the modals and dropdown
+menus as well as the submit event handlers for each of the modal forms.
+
+When given more time, I will experiment porting the front-end from browser-template
+to a front-end framework preferably Angular as well as add additional features
+such as a trip summary stats page to satisfy some user stories mentioned in
+the client GitHub repo.
 
 ## [License](LICENSE)
 
