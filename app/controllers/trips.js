@@ -18,9 +18,9 @@ const index = (req, res, next) => {
 }
 
 const indexUser = (req, res, next) => {
-  console.log('(/controllers/trips.js) Inside indexUser')
+  // console.log('(/controllers/trips.js) Inside indexUser')
   const owner = { _owner: req.user._id }
-  console.log('owner is: ', owner)
+  // console.log('owner is: ', owner)
   Trip.find(owner)
     .then(trips => res.json({
       trips: trips.map((e) =>

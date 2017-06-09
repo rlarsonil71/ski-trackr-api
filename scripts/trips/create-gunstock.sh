@@ -3,8 +3,8 @@
 API="http://localhost:4741"
 URL_PATH="/trips"
 
-OWNER="59359a840bb71f634bf9176f"
-TOKEN="YzHx7GH+PhlGHZ90ePuoPditSyX8Kw3d5KAy/wuSaK8=--VIUfJl+sQlWWu/vV1OxtO0iBAjl4RIiRQZFBdpK3rCk="
+OWNER="owner"
+TOKEN="token"
 DATE="2017-06-04"
 RESORT="Gunstock"
 EQUIPTYPE="Ski"
@@ -12,7 +12,6 @@ CONDITIONS="Packed Powder"
 NUMRUNS="31"
 FAVORITERUN="Out of Sight"
 COMMENTS="Perfect ski day!"
-# ITEMS="{name: 'apple', price: 100, qty: 2},{name: 'orange', price: 200, qty: 1},{name: 'banana', price: 300, qty: 1}"
 
 curl "${API}${URL_PATH}" \
   --include \
