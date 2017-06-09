@@ -49,16 +49,16 @@ Install with:
 
 This API follows the standard API project structure in Express.
 
-`curl` command scripts are stored in [`scripts`](scripts) with names that
+`curl` command scripts are stored in `scripts` with names that
 correspond to API actions.
 
 User authentication is built-in.
 
-Dependencies are stored in [`package.json`](package.json).
+Dependencies are stored in `package.json`(package.json).
 
-- [`app/controllers`](app/controllers)
-- [`app/models`](app/models)
-- [`config/routes.js`](config/routes.js)
+- `app/controllers`
+- `app/models`
+- `config/routes.js`
 
 ## ERD
 
@@ -66,14 +66,15 @@ Dependencies are stored in [`package.json`](package.json).
 
 ## Database Structures (Schemas)
 
- - [`tripSchema`](tripSchema)
-   tripDate      - Date (Required)
-   resort        - String (Required)
-   equipmentType - String (Required)
-   conditions    - String (Required)
-   numberOfRuns  - Number (Required)
-   favoriteRun   - String (Required)
-   comments      - String (Required)
+#### trip Schema
+
+-   tripDate      - Date (Required)
+-   resort        - String (Required)
+-   equipmentType - String (Required)
+-   conditions    - String (Required)
+-   numberOfRuns  - Number (Required)
+-   favoriteRun   - String (Required)
+-   comments      - String (Required)
 
 ## API
 
@@ -81,7 +82,7 @@ Use this as the basis for your own API documentation. Add a new third-level
 heading for your custom entities, and follow the pattern provided for the
 built-in user authentication documentation.
 
-Scripts are included in [`scripts`](scripts) to test built-in actions. Add your
+Scripts are included in `scripts` to test built-in actions. Add your
 own scripts to test your custom API.
 
 ### Authentication
