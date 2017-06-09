@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# ski-trackr-api
+# Ski Trackr Api - Capstone
 
 API for Ski Trackr site.
 
@@ -9,28 +9,27 @@ This project uses `express` as an API and includes user authentication and commo
 This API follows Rails-like conventions for organizing controller and
 model code, and has a routing layer which is similar to the Rails routing DSL.
 
-## Heroku API URL
+## Project Links
 
+#### Front-End Ski-Trackr Client Application URL
+-   [`Front-End Client URL`](https://rlarsonil71.github.io/ski-trackr-client/)
+
+#### Heroku API URL
 -   [`Heroku API URL`](https://protected-gorge-95856.herokuapp.com/)
 
-## GitHub Application Repositories
-
+#### GitHub Application Repositories
 -   [`Front-End Client`](https://github.com/rlarsonil71/ski-trackr-client)
 -   [`Back-End API`](https://github.com/rlarsonil71/ski-trackr-api/)
 
-## Front-End Client Application URL
-
--   [`Client URL`](https://rlarsonil71.github.io/ski-trackr-client)
-
 ## Project Requirements
-
 -   [`capstone-project`](https://github.com/ga-wdi-boston/capstone-project)
 
 ## Project Dependencies
-
+-   [`browser-template`](https://github.com/ga-wdi-boston/browser-template)
 -   [`ski-trackr-api`](https://github.com/ga-wdi-boston/ski-trackr-api)
 -   [`express-api-template`](https://github.com/ga-wdi-boston/express-api-template)
 -   [`express-api-deployment-guide`](https://github.com/ga-wdi-boston/express-api-deployment-guide)
+-   [`heroku`](https://dashboard.heroku.com/apps)
 
 ## Dependencies
 
@@ -46,29 +45,35 @@ Install with:
  - `heroku restart`
  - `heroku open`
 
- ## Structure
+## Structure
 
- This API follows the standard API project structure in Express.
+This API follows the standard API project structure in Express.
 
- `curl` command scripts are stored in [`scripts`](scripts) with names that
- correspond to API actions.
+`curl` command scripts are stored in [`scripts`](scripts) with names that
+correspond to API actions.
 
- User authentication is built-in.
+User authentication is built-in.
 
- Dependencies are stored in [`package.json`](package.json).
+Dependencies are stored in [`package.json`](package.json).
 
- - [`app/controllers`](app/controllers)
- - [`app/models`](app/models)
- - [`config/routes.js`](config/routes.js)
+- [`app/controllers`](app/controllers)
+- [`app/models`](app/models)
+- [`config/routes.js`](config/routes.js)
 
-### ERD
+## ERD
 
 ![Alt text](/public/images/SkiTrackrAPIERD.jpg?raw=true "Ski Trackr ERD")
 
-### Database Structures (Schemas)
+## Database Structures (Schemas)
 
  - [`tripSchema`](tripSchema)
-   TBD
+   tripDate      - Date (Required)
+   resort        - String (Required)
+   equipmentType - String (Required)
+   conditions    - String (Required)
+   numberOfRuns  - Number (Required)
+   favoriteRun   - String (Required)
+   comments      - String (Required)
 
 ## API
 
@@ -268,12 +273,18 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-### Trips (VERB/URL Pattern/Controller#Action)
+### Trips Resource (VERB/URL Pattern/Controller#Action)
 
-TBD
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/trips`               | `trips#create`    |
+| GET    | `/trips/:id`           | `trips#show`      |
+| GET    | `/usertrips/:id`       | `trips#indexUser` |
+| PATCH  | `/trips/:id`           | `trips#update`    |
+| DELETE | `/trips/:id`           | `trips#delete`    |
 
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
+2.  All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
